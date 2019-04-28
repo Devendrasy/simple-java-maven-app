@@ -3,8 +3,7 @@ pipeline {
     agent any
 	tools { 
         maven 'MAVEN' 
-        jdk 'JAVA' 
-	Sonar 'Sonar_Scanner'	
+        jdk 'JAVA'	
 
     }
     stages {
