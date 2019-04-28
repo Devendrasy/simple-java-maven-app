@@ -12,9 +12,8 @@ pipeline {
                 bat 'mvn -B -DskipTests clean package'
             }
         }
-    }
-    stages {
-        stage('Sonar Qube analysis') {
+    
+     stage('Sonar Qube analysis') {
             steps {
                 bat 'mvn sonar:sonar'
             } 
