@@ -22,8 +22,14 @@ pipeline {
 
         }
 
-        
-
     }
 
+    stages {
+        stage('Sonar Qube analysis') {
+            steps {
+                bat 'mvn sonar:sonar'
+            } 
+        }       
+    }	
+	
 }
