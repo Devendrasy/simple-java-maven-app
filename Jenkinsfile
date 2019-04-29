@@ -15,7 +15,7 @@ pipeline {
     
      stage('Sonar Qube analysis') {
             steps {
-                bat 'mvn sonar:sonar'
+                bat 'mvn sonar:sonar -Dsonar.host.url=http://localhost:9000/sonar -Dsonar.projectName=MyProject -Dsonar.projectVersion=1.0 -Dsonar.projectKey=myproject -Dsonar.sources=.'
             } 
         }       
     }	
