@@ -1,13 +1,14 @@
 pipeline {
     agent any
 	tools { 
-        maven 'MAVEN' 
-        jdk 'JAVA' 
+        maven 'M2' 
+        jdk 'Java8' 
     }
     stages {
         stage('Build') {
             steps {
-                bat 'mvn -B -DskipTests clean package'
+                //sh 'mvn -B -DskipTests clean package'
+		    sh 'mvn clean package sonar:sonar' 
             }
         }
         
